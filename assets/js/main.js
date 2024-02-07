@@ -19,9 +19,10 @@ function convertPokemonToLi(pokemon) {
           `
          
 }
+console.log(document.getElementById('pokemonList'))
 
 
-fetch(url)
+/* fetch(url)
     .then((response) => response.json() )
     .then((jsonBody) => jsonBody.results)
     .then((pokemons) => {
@@ -30,9 +31,11 @@ fetch(url)
             const pokemon = pokemons[i];
             
             console.log(convertPokemonToLi(pokemon))
+
+            document.getElementsByClassName('pokemos')
         }
     })
-    .catch((error) => console.error)
+    .catch((error) => console.error) */
     
 
 
