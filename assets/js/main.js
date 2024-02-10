@@ -30,7 +30,7 @@ pokeApi.getPokemons().then((pokemons) => {
         const listItens = []
         for (let i = 0; i < pokemons.length; i++) {
             const pokemon = pokemons[i];
-            listItemnspush(convertPokemonToLi(pokemon))
+            listItens.push(convertPokemonToLi(pokemon))
             //console.log(convertPokemonToLi(pokemon))
             //pokemonOl.innerHTML += convertPokemonToLi(pokemon)
         }
