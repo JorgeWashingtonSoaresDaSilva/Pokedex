@@ -26,15 +26,20 @@ const pokemonOl = document.getElementById('pokemonList') // aqui eu pego objeto 
 // pokemonOl.innerHTML += '<li>Teste</li>'  aqui eu pego lista  e somando mais um item a lista
 
 // código de consumo de api
-pokeApi.getPokemons().then((pokemons) => {
-        const listItens = []
-        for (let i = 0; i < pokemons.length; i++) {
-            const pokemon = pokemons[i];
-            listItens.push(convertPokemonToLi(pokemon))
-            //console.log(convertPokemonToLi(pokemon))
-            //pokemonOl.innerHTML += convertPokemonToLi(pokemon)
-        }
-        console.log(listItens)
+pokeApi.getPokemons().then((pokemons = []) => {
+
+    const newList =pokemons.map(pokemon => {
+        return pokemon.name
+    })
+    console.log(newList)
+        // const listItens = []
+        // for (let i = 0; i < pokemons.length; i++) {
+        //     const pokemon = pokemons[i];
+        //     listItens.push(convertPokemonToLi(pokemon))
+        //     //console.log(convertPokemonToLi(pokemon))
+        //     //pokemonOl.innerHTML += convertPokemonToLi(pokemon)
+        // }
+       //console.log(listItens)
     })
     .catch((error) => console.error) 
     
