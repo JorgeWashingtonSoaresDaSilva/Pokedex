@@ -25,7 +25,7 @@ function convertPokemonToLi(pokemon) {
 const pokemonOl = document.getElementById('pokemonList') // aqui eu pego objeto e coloco numa variavel
 // pokemonOl.innerHTML += '<li>Teste</li>'  aqui eu pego lista  e somando mais um item a lista
 
-
+// código de consumo de api
 fetch(url)
     .then((response) => response.json() )
     .then((jsonBody) => jsonBody.results)
