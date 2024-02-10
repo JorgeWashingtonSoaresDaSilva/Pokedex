@@ -26,10 +26,7 @@ const pokemonOl = document.getElementById('pokemonList') // aqui eu pego objeto 
 // pokemonOl.innerHTML += '<li>Teste</li>'  aqui eu pego lista  e somando mais um item a lista
 
 // código de consumo de api
-fetch(url)
-    .then((response) => response.json() )
-    .then((jsonBody) => jsonBody.results)
-    .then((pokemons) => {
+pokeApi.getPokemons().then((pokemons) => {
         
         for (let i = 0; i < pokemons.length; i++) {
             const pokemon = pokemons[i];
