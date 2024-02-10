@@ -28,10 +28,12 @@ const pokemonOl = document.getElementById('pokemonList') // aqui eu pego objeto 
 // código de consumo de api
 pokeApi.getPokemons().then((pokemons = []) => {
 
-    const newList =pokemons.map(pokemon => {
-        return pokemon.name
+    const newList = pokemons.map(pokemon => {
+        return convertPokemonToLi(pokemon)
     })
-    console.log(newList)
+    const newHtml = newList.join('')
+
+    pokemonOl.innerHTML += newHtml
         // const listItens = []
         // for (let i = 0; i < pokemons.length; i++) {
         //     const pokemon = pokemons[i];
