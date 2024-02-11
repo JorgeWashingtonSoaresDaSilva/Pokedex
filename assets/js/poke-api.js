@@ -1,12 +1,18 @@
 // criando objeto
 const pokeApi = {}
 
+pokeApi.getPokemonDetail = (pokemon) =>{
+    return fetch(pokemon.url).then((response) => response.json())
+}
 // criando aero funtion
-pokeApi.getPokemons = (offset = 0,limit = 10) => {
+pokeApi.getPokemons = (offset = 0,limit = 5) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
     return fetch(url)
         .then((response) => response.json() )
         .then((jsonBody) => jsonBody.results)
-        .catch((erro) => console.error(console.error))
+        .then((pokemons) => pokemons.map((pokeApi.getPokemonDetail)))
+        .then((detailRequest) => Promise.all(detailRequest))
+        .then((pokemonsDetails) => pokemonsDetails)
+        //.catch((erro) => console.error(console.error))
 
 }
