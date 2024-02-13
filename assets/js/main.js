@@ -1,4 +1,5 @@
-
+const pokemonList = document.getElementById('pokemonList') 
+const loadMoreButton = document.getElementById('loadMoreButton')
 function convertPokemonToLi(pokemon) {
     return `
          
@@ -18,7 +19,7 @@ function convertPokemonToLi(pokemon) {
           `
          
 }
-const pokemonList = document.getElementById('pokemonList') 
+
 
 pokeApi.getPokemons().then((pokemons = []) => {
 
