@@ -5,4 +5,8 @@ class Pokemon{
     type;
     types = [];
     photo;
+    statusName =[];
+    statName
+    statusBase =[];
+    statBase
 }
